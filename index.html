@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nox — Gece için tasarlandı</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="img/logo.svg" alt=""> Nox</a>
+      <form class="header-search" id="header-search" role="search">
+        <label class="sr-only" for="header-search-input">Ara</label>
+        <input id="header-search-input" type="search" placeholder="Ürün ara">
+      </form>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html" aria-current="page">Ana sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+        <a class="cart-link" href="sepet.html">Sepet <span class="cart-count" data-cart-count hidden>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="wrap hero">
+      <div>
+        <p class="muted">Teknoloji ve masaüstü aksesuarı</p>
+        <h1>Gece için tasarlandı.</h1>
+        <p class="lead">Koyu yüzeyler, sakin ışık, abartısız nesneler. Nox; masanda durması gereken az ürünü seçer.</p>
+        <div class="hero-actions">
+          <a class="btn" href="urunler.html">Katalog</a>
+          <a class="btn btn-ghost" href="urun.html?id=pulse">Pulse’a bak</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <img src="img/pulse.svg" alt="Nox Pulse kulaklık illüstrasyonu">
+      </div>
+    </section>
+
+    <section class="wrap trust">
+      <article>
+        <h2>Ücretsiz kargo</h2>
+        <p class="muted">1500 TL üzeri siparişlerde kargo bizden.</p>
+      </article>
+      <article>
+        <h2>14 gün iade</h2>
+        <p class="muted">Kutusu duruyorsa sorun sormadan geri alıyoruz.</p>
+      </article>
+      <article>
+        <h2>Güvenli ödeme</h2>
+        <p class="muted">Bu demo kart çekmez; gerçek kasayı sonra bağlarız.</p>
+      </article>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-head">
+        <div>
+          <p class="muted tiny">Seçilmiş</p>
+          <h2>Bu haftanın masası</h2>
+        </div>
+        <a href="urunler.html">Tümünü gör</a>
+      </div>
+      <div class="grid" id="featured-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Nox — demo vitrin, 2026</p>
+      <p>HTML, CSS ve JavaScript ile kuruldu.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" data-mobile-bar hidden>
+    <span>Sepet <strong data-cart-total>0 TL</strong></span>
+    <a class="btn btn-small" href="sepet.html">Sepete git</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js?v=2"></script>
+  <script src="js/products.js?v=2"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>

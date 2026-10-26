@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipariş alındı — Nox</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="thanks">
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="img/logo.svg" alt=""> Nox</a>
+      <nav class="nav" id="site-nav">
+        <a href="index.html">Ana sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a class="cart-link" href="sepet.html">Sepet <span class="cart-count" data-cart-count hidden>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik" class="wrap">
+    <div class="empty" id="thanks-root" style="margin:48px 0;">
+      <h1>Siparişin alındı, <span id="thanks-name"></span>.</h1>
+      <p class="muted">Toplam <strong id="thanks-total"></strong>. Sipariş Supabase tablosuna yazıldı.</p>
+      <a class="btn" href="urunler.html">Alışverişe devam</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js?v=2"></script>
+  <script src="js/products.js?v=2"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>

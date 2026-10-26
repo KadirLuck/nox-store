@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda — Nox</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><img src="img/logo.svg" alt=""> Nox</a>
+      <form class="header-search" id="header-search" role="search">
+        <label class="sr-only" for="header-search-input">Ara</label>
+        <input id="header-search-input" type="search" placeholder="Ürün ara">
+      </form>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html">Ana sayfa</a>
+        <a href="urunler.html">Ürünler</a>
+        <a href="hakkimizda.html" aria-current="page">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+        <a class="cart-link" href="sepet.html">Sepet <span class="cart-count" data-cart-count hidden>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="icerik" class="wrap">
+    <div class="page-title">
+      <h1>Az ürün, net masa.</h1>
+    </div>
+    <section class="split">
+      <div>
+        <p class="lead">Nox bir stüdyo vitrini. Gece çalışanlar için kulaklık, ışık ve masa araçları.</p>
+        <p class="muted">Bu site iş başvurusu demosu olarak HTML, CSS ve JavaScript ile kuruldu. Ürünler sahte, sepet tarayıcı hafızasında, ödeme gerçek değil. Amaç: bir mağazanın iskeletini okunur kodla göstermek.</p>
+      </div>
+      <div class="hero-panel">
+        <img src="img/beam.svg" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Nox — demo vitrin, 2026</p>
+      <p>HTML, CSS ve JavaScript ile kuruldu.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js?v=2"></script>
+  <script src="js/products.js?v=2"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
