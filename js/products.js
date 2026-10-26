@@ -21,7 +21,12 @@ async function loadProducts() {
     return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
   });
   PRODUCTS.length = 0;
-  rows.forEach((row) => PRODUCTS.push(row));
+  rows.forEach((row) => {
+    if (!String(row.image || "").endsWith(".jpg")) {
+      row.image = "img/" + row.id + ".jpg";
+    }
+    PRODUCTS.push(row);
+  });
 }
 
 async function saveOrder(order) {

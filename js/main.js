@@ -43,7 +43,7 @@ function productCard(product) {
     <article class="card">
       <a class="card-media" href="urun.html?id=${product.id}">
         ${badge}
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image}" alt="${product.name}" loading="lazy">
       </a>
       <div class="card-body">
         <p class="muted tiny">${product.category}</p>
@@ -76,6 +76,12 @@ function bindAddButtons(root) {
 
 function renderHome() {
   const featured = $("#featured-grid");
+  const hero = $("#hero-photo");
+  const lead = getProduct("pulse");
+  if (hero && lead) {
+    hero.src = lead.image;
+    hero.alt = lead.name;
+  }
   if (!featured) return;
   featured.innerHTML = PRODUCTS.slice(0, 4).map(productCard).join("");
   bindAddButtons(featured);
